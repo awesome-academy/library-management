@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%=t "nameproject" %></title>
-  <%= csrf_meta_tags %>
-  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
-  <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
-</head>
-<body>
-<%= yield %>
-</body>
+  <head>
+    <title><%= t "nameproject" %></title>
+    <%= render "layouts/rails_default" %>
+  </head>
+  <body>
+    <%= yield %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+  </body>
 </html>

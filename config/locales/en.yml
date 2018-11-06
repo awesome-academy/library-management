@@ -1,2 +1,8 @@
 en:
   nameproject: "Library management"
+  static:
+    profile: "profile"
+    settings: "settings"
+    logout: "log out"
+    login:  "log in"
+    body_tilte: "SLM"
