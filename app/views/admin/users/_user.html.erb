@@ -1,0 +1,33 @@
+<tr>
+  <td><%= user.id %></td>
+  <td><%= user.username %></td>
+  <td><%= user.email %></td>
+  <td>
+    <% if user.is_admin? %>
+      <%= link_to update_role_admin_user_path(user),
+        :remote => true, method: :post do %>
+        <button class="btn btn-primary"><%= t "admin.admin" %></button>
+      <% end %>
+    <% else %>
+      <%= link_to update_role_admin_user_path(user),
+        :remote => true, method: :post do %>
+        <button class="btn btn-info"><%= t "admin.user" %></button>
+      <% end %>
+    <% end %>
+  </td>
+  <td>
+    <%= link_to edit_admin_user_path(user) do %>
+      <button class="btn btn-success">
+        <%= t "admin.edit" %>
+      </button>
+    <% end %>
+  </td>
+  <td>
+    <%= link_to admin_user_path(user), :remote => true,
+      method: :delete do %>
+      <button class="btn btn-danger">
+        <%= t "admin.delete" %>
+      </button>
+    <% end %>
+  </td>
+</tr>

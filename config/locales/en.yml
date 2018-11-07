@@ -1,2 +1,18 @@
 en:
   nameproject: "Library management"
+  library: "Library"
+  management: "management"
+  admin:
+    edit: "Edit"
+    delete: "Delete"
+    can_not_delete: "Cannot delete user"
+    delete_success: "User deleted"
+    user_not_found: "User not found"
+    update_success: "Update success"
+    can_not_update: "Can not update"
+    admin: "Admin"
+    user: "User"
+    name: "Name"
+    email: "Email"
+    export: "Export"
+    search: "Search"

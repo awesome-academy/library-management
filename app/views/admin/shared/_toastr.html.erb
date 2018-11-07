@@ -1,0 +1,5 @@
+<script>
+  <% flash.each do |key, value| %>
+    <%= raw "toastr.#{key}(\"#{value}\");" %>
+  <% end %>
+</script>
