@@ -22,6 +22,8 @@ gem "bootstrap-kaminari-views"
 gem "jquery-rails"
 gem "ffaker"
 gem "toastr-rails"
+gem "jquery-rails"
+gem "ransack"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

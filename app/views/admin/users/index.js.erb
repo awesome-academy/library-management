@@ -1,0 +1,2 @@
+$('#users-collection').html('<%= j render partial: "user", collection: @users %>')
+$('.pagination').html('<%= j paginate @users, remote: true %>')
