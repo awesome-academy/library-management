@@ -1,0 +1,10 @@
+<div class="search-area">
+<!--  <form action="#" method="post">-->
+<!--    <input type="search" name="search" id="headerSearch" placeholder="Type for search">-->
+<!--    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>-->
+<!--  </form>-->
+  <%= search_form_for @search, url: yield(:search_parth), method: :get, remote: true do %>
+    <input type="search" name="search" id="headerSearch" placeholder="Type for search">
+    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+  <% end %>
+</div>

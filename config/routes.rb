@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root "static_pages#home"
+  get "/books", to: "books#index"
+  get "/book", to: "books#show"
   namespace :admin do
     resources :users do
       member do
