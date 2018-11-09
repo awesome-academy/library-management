@@ -13,9 +13,9 @@ Completed 200 OK in 1461ms (Views: 1371.5ms | ActiveRecord: 45.3ms)
 
 
 Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 08:32:59 +0700
-  
+
 ActionController::RoutingError (uninitialized constant AdminBaseController):
-  
+
 app/controllers/admin/users_controller.rb:1:in `<top (required)>'
 Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 08:34:46 +0700
 Processing by Admin::UsersController#index as HTML
@@ -60,9 +60,9 @@ Completed 200 OK in 36ms (Views: 30.9ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 08:35:28 +0700
-  
+
 ActionController::RoutingError (uninitialized constant AdminBaseController):
-  
+
 app/controllers/admin/users_controller.rb:1:in `<top (required)>'
 Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 08:36:12 +0700
 Processing by Admin::UsersController#index as HTML
@@ -85,7 +85,7 @@ Processing by Admin::UsersController#edit as HTML
 Completed 500 Internal Server Error in 212ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fd75c0a1410>:0x00007fd73902e938>):
     2:   <div class="col-md-6 col-md-offset-3">
     3:     <div class="panel panel-default">
@@ -94,7 +94,7 @@ ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007f
     6:           <div class="form-group">
     7:             <%= f.label :email %><br/>
     8:             <%= f.email_field :email, autofocus: true, autocomplete: "email",
-  
+
 app/views/admin/users/edit.html.erb:5:in `_app_views_admin_users_edit_html_erb__4338716342667382008_70281175613940'
 Started GET "/admin/users/16/edit" for 127.0.0.1 at 2018-11-08 08:38:18 +0700
 Processing by Admin::UsersController#edit as HTML
@@ -139,7 +139,7 @@ Processing by Admin::UsersController#edit as HTML
 Completed 500 Internal Server Error in 182ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fd75c0a1410>:0x00007fd73a245e28>):
     2:   <div class="col-md-6 col-md-offset-3">
     3:     <div class="panel panel-default">
@@ -148,7 +148,7 @@ ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007f
     6:           <div class="form-group">
     7:             <%= f.label :email %><br/>
     8:             <%= f.email_field :email, autofocus: true, autocomplete: "email",
-  
+
 app/views/admin/users/edit.html.erb:5:in `_app_views_admin_users_edit_html_erb__4338716342667382008_70281185080480'
 Started GET "/admin/users/" for 127.0.0.1 at 2018-11-08 08:53:04 +0700
   [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
@@ -188,9 +188,9 @@ Completed 200 OK in 81ms (Views: 75.3ms | ActiveRecord: 1.2ms)
 
 
 Started GET "/admin/users/index.csv?is_admin=123" for 127.0.0.1 at 2018-11-08 09:05:08 +0700
-  
+
 AbstractController::ActionNotFound (The action 'show' could not be found for Admin::UsersController):
-  
+
 actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
 actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
@@ -327,7 +327,7 @@ Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 09:09:25 +0700
 Completed 200 OK in 98490ms (Views: 80.2ms | ActiveRecord: 6.1ms)
 
 
-  
+
 SyntaxError (/home/framgia/training/library-management/app/controllers/admin/users_controller.rb:14: syntax error, unexpected tSTRING_DEND, expecting keyword_end
 w.strftime('%m-%d-%Y')}.csv" }
                               ^
@@ -338,7 +338,7 @@ w.strftime('%m-%d-%Y')}.csv" }
      format.js {render :index}
                               ^
 /home/framgia/training/library-management/app/controllers/admin/users_controller.rb:74: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/controllers/admin/users_controller.rb:14: syntax error, unexpected tSTRING_DEND, expecting keyword_end
 app/controllers/admin/users_controller.rb:41: syntax error, unexpected tSTRING_DEND, expecting '}'
 app/controllers/admin/users_controller.rb:52: syntax error, unexpected tSTRING_DEND, expecting '}'
@@ -404,9 +404,9 @@ Completed 200 OK in 14704ms (Views: 57.7ms | ActiveRecord: 1.2ms)
 
 
 Started GET "/admin/users/index" for 127.0.0.1 at 2018-11-08 09:11:13 +0700
-  
+
 AbstractController::ActionNotFound (The action 'show' could not be found for Admin::UsersController):
-  
+
 actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
 actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
@@ -470,9 +470,9 @@ Processing by Admin::UsersController#index as CSV
 Completed 500 Internal Server Error in 1241ms (ActiveRecord: 0.3ms)
 
 
-  
+
 NameError (uninitialized constant User::CSV):
-  
+
 app/models/user.rb:12:in `to_csv'
 app/controllers/admin/users_controller.rb:13:in `block (2 levels) in index'
 app/controllers/admin/users_controller.rb:9:in `index'
@@ -487,9 +487,9 @@ Processing by Admin::UsersController#index as CSV
 Completed 500 Internal Server Error in 16610ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NameError (uninitialized constant User::CSV):
-  
+
 app/models/user.rb:12:in `to_csv'
 app/controllers/admin/users_controller.rb:15:in `block (2 levels) in index'
 app/controllers/admin/users_controller.rb:9:in `index'
@@ -732,14 +732,14 @@ Processing by Admin::UsersController#index as HTML
 Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/home/framgia/training/library-management/app/views/admin/users/index.html.erb:26: syntax error, unexpected keyword_do_block
  + ".csv", target: :_blank, do @output_buffer.safe_append='
                               ^
 /home/framgia/training/library-management/app/views/admin/users/index.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input
           ensure
                 ^):
-  
+
 app/views/admin/users/index.html.erb:26: syntax error, unexpected keyword_do_block
 app/views/admin/users/index.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input
 Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 09:21:39 +0700
@@ -749,14 +749,14 @@ Processing by Admin::UsersController#index as HTML
 Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/home/framgia/training/library-management/app/views/admin/users/index.html.erb:26: syntax error, unexpected keyword_do_block
 + ".csv"), target: :_blank, do @output_buffer.safe_append='
                               ^
 /home/framgia/training/library-management/app/views/admin/users/index.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input
           ensure
                 ^):
-  
+
 app/views/admin/users/index.html.erb:26: syntax error, unexpected keyword_do_block
 app/views/admin/users/index.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input
 Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 09:22:04 +0700
@@ -884,14 +884,14 @@ Processing by Admin::UsersController#index as HTML
 Completed 500 Internal Server Error in 273ms (ActiveRecord: 1.2ms)
 
 
-  
+
 ActionView::Template::Error (Asset was not declared to be precompiled in production.
 Add `Rails.application.config.assets.precompile += %w( admin/admin.js )` to `config/initializers/assets.rb` and restart your server):
     57:     </div>
     58:   </div>
     59: </div>
     60: <%= javascript_include_tag "admin/admin", "data-turbolinks-track": "reload" %>
-  
+
 app/views/admin/users/index.html.erb:60:in `_app_views_admin_users_index_html_erb___1257614216468071625_38356580'
 Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 10:07:46 +0700
   [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
@@ -908,9 +908,9 @@ Completed 200 OK in 586ms (Views: 572.9ms | ActiveRecord: 2.1ms)
 
 
 Started GET "/admin/.csv?q[username_cont]=&q[is_admin_eq]=true" for 127.0.0.1 at 2018-11-08 10:07:55 +0700
-  
+
 ActionController::RoutingError (No route matches [GET] "/admin/.csv"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -970,13 +970,353 @@ Sent data  (5.5ms)
 Completed 200 OK in 20ms (Views: 5.0ms | ActiveRecord: 1.0ms)
 
 
-Started GET "/admin/user" for 127.0.0.1 at 2018-11-08 13:14:11 +0700
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (16.2ms)[0m  [1m[32mINSERT INTO `publishers` (`name`, `created_at`, `updated_at`) VALUES ('Undefine', '2018-11-08 03:21:14', '2018-11-08 03:21:14')[0m
+  [1m[35m (47.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPublisher Load (0.8ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` LIMIT 11[0m
+Started GET "/" for 127.0.0.1 at 2018-11-08 10:26:35 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/framgia/.rvm/gems/ruby-2.4.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/framgia/.rvm/gems/ruby-2.4.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:26:46 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  Rendered admin/publisher/index.html.erb within layouts/admin (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 59ms (Views: 52.0ms | ActiveRecord: 1.7ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `publishers` (`name`, `created_at`, `updated_at`) VALUES ('Novel', '2018-11-08 03:31:45', '2018-11-08 03:31:45')[0m
+  [1m[35m (67.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `publishers` (`name`, `created_at`, `updated_at`) VALUES ('Drama', '2018-11-08 03:31:55', '2018-11-08 03:31:55')[0m
+  [1m[35m (49.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO `publishers` (`name`, `created_at`, `updated_at`) VALUES ('Thrilling', '2018-11-08 03:32:13', '2018-11-08 03:32:13')[0m
+  [1m[35m (62.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:32:18 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.8ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (31.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 89ms (Views: 78.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:32:26 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.8ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (4.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 79ms (Views: 71.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:36:24 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  Rendered admin/publisher/index.html.erb within layouts/admin (3.3ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError (/home/framgia/training/library-management/app/views/admin/publisher/index.html.erb:45: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+
+app/views/admin/publisher/index.html.erb:45: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:36:50 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 52ms (Views: 49.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:36:57 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  Rendered admin/publisher/index.html.erb within layouts/admin (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError (/home/framgia/training/library-management/app/views/admin/publisher/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+
+app/views/admin/publisher/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:38:44 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  Rendered admin/publisher/index.html.erb within layouts/admin (1.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError (/home/framgia/training/library-management/app/views/admin/publisher/index.html.erb:45: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+
+app/views/admin/publisher/index.html.erb:45: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:38:54 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (4.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 41.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:40:49 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.7ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (7.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 97ms (Views: 88.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:41:16 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (1.0ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (16.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 97ms (Views: 89.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:41:26 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (1.6ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (10.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 111ms (Views: 100.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:41:46 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (1.1ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (13.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 105ms (Views: 88.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:43:35 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.9ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (15.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 124ms (Views: 109.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:47:30 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (82.8ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.3ms)
+
+
+
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( admin/publisher.js )` to `config/initializers/assets.rb` and restart your server):
+    43:     </div>
+    44:   </div>
+    45: </div>
+    46: <%= javascript_include_tag "admin/publisher", "data-turbolinks-track": "reload" %>
+
+app/views/admin/publisher/index.html.erb:46:in `_app_views_admin_publisher_index_html_erb___4033104417313708379_69946227378520'
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:47:55 +0700
   [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
-  
-ActionController::RoutingError (No route matches [GET] "/admin/user"):
-  
-actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (447.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 569ms (Views: 557.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:51:51 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.6ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (7.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.6ms)
+Completed 200 OK in 106ms (Views: 102.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:53:43 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (9.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 103ms (Views: 99.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:54:27 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (7.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 102ms (Views: 98.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:58:41 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.6ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (11.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 133ms (Views: 129.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 10:59:51 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (9.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 104ms (Views: 98.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:01:50 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.8ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (23.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 144ms (Views: 134.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:03:26 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (1.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (40.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 164ms (Views: 153.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:03:39 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (8.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 109ms (Views: 105.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:03:58 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.7ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (12.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 113ms (Views: 107.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:04:23 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (8.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 103ms (Views: 100.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:05:52 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.7ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (7.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 103.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:06:20 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (7.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 103ms (Views: 100.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:06:59 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (10.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 126ms (Views: 122.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:07:44 +0700
+
+AbstractController::ActionNotFound (The action 'create' could not be found for Admin::PublisherController):
+
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -1003,67 +1343,928 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:14:12 +0700
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:08:27 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.6ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (10.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 129ms (Views: 123.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:09:18 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (1.0ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (20.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 128ms (Views: 121.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:10:50 +0700
+
+AbstractController::ActionNotFound (The action 'create' could not be found for Admin::PublisherController):
+
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:11:05 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.9ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (29.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 157ms (Views: 149.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:11:24 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (6.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 108ms (Views: 105.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:11:38 +0700
+
+AbstractController::ActionNotFound (The action 'create' could not be found for Admin::PublisherController):
+
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/publisher?utf8=%E2%9C%93&authenticity_token=skBzn7L0v9Rzax%2BO7I8X31b3EUrdY30h%2Bl4skp8M23JIfEaU02nQo04czAcnLz%2BaRUzyK1ijuA%2F0K7ktnvZwMA%3D%3D&id=&name=Drama&commit=Save" for 127.0.0.1 at 2018-11-08 11:11:42 +0700
+Processing by Admin::PublisherController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skBzn7L0v9Rzax+O7I8X31b3EUrdY30h+l4skp8M23JIfEaU02nQo04czAcnLz+aRUzyK1ijuA/0K7ktnvZwMA==", "id"=>"", "name"=>"Drama", "commit"=>"Save"}
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (1.6ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (18.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 112ms (Views: 100.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:13:41 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (8.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 104ms (Views: 101.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 11:14:35 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (16.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 130ms (Views: 124.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/publisher?utf8=%E2%9C%93&authenticity_token=wdjUvPGlu%2BdD5BssK3yfVqYNIcYTtwducVWNHM3bH8U75OG3kDjUkH6TyKXg3LcTtbbCp5Z3wkB%2FIBijzCG0hw%3D%3D&id=2&name=Novel&commit=Save" for 127.0.0.1 at 2018-11-08 11:14:45 +0700
+Processing by Admin::PublisherController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wdjUvPGlu+dD5BssK3yfVqYNIcYTtwducVWNHM3bH8U75OG3kDjUkH6TyKXg3LcTtbbCp5Z3wkB/IBijzCG0hw==", "id"=>"2", "name"=>"Novel", "commit"=>"Save"}
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (4.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 12:55:12 +0700
+  [1m[35m (128.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (23.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (4383.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 5374ms (Views: 5084.4ms | ActiveRecord: 134.6ms)
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:42:23 +0700
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
 Processing by Admin::UsersController#index as HTML
   Rendering admin/users/index.html.erb within layouts/admin
-  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
-  Rendered collection of admin/users/_user.html.erb [10 times] (4.5ms)
-  [1m[35m (96.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
-  Rendered admin/users/index.html.erb within layouts/admin (1205.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (7.4ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (636.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 736ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"admin/publisher"}, missing required keys: [:id]):
+    42:         <% end %>
+    43:       </li>
+    44:       <li>
+    45:         <%= link_to admin_publisher_path %>
+    46:         <em class="fa fa-bar-chart">&nbsp;</em> Publisher
+    47:       </li>
+    48:       <li>
+  
+app/views/layouts/admin.html.erb:45:in `_app_views_layouts_admin_html_erb__2719300731133931855_41212040'
+Started PUT "/__web_console/repl_sessions/99770456ef341c713b52e3d20035f761" for 127.0.0.1 at 2018-11-08 13:42:31 +0700
+Started PUT "/__web_console/repl_sessions/99770456ef341c713b52e3d20035f761" for 127.0.0.1 at 2018-11-08 13:42:31 +0700
+Started PUT "/__web_console/repl_sessions/99770456ef341c713b52e3d20035f761" for 127.0.0.1 at 2018-11-08 13:42:37 +0700
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:42:50 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (4.9ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (27.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 459ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_publisher_path_index' for #<#<Class:0x0000000004ee7790>:0x00007f48dd82f140>
+Did you mean?  admin_publisher_path):
+    42:         <% end %>
+    43:       </li>
+    44:       <li>
+    45:         <%= link_to admin_publisher_path_index %>
+    46:         <em class="fa fa-bar-chart">&nbsp;</em> Publisher
+    47:       </li>
+    48:       <li>
+  
+app/views/layouts/admin.html.erb:45:in `_app_views_layouts_admin_html_erb__2719300731133931855_69975474026220'
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:43:05 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (12.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (43.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 148ms (Views: 141.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:43:07 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (17.3ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (62.7ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
   Rendered admin/shared/_toastr.html.erb (0.7ms)
-Completed 200 OK in 1598ms (Views: 1364.6ms | ActiveRecord: 99.2ms)
+Completed 200 OK in 139ms (Views: 134.4ms | ActiveRecord: 1.1ms)
 
 
-Started GET "/admin/users/16/edit" for 127.0.0.1 at 2018-11-08 13:14:25 +0700
-Processing by Admin::UsersController#edit as HTML
-  Parameters: {"id"=>"16"}
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1[0m
-  Rendering admin/users/edit.html.erb within layouts/admin
-  Rendered admin/users/edit.html.erb within layouts/admin (54.4ms)
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:43:08 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (6.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (30.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 102ms (Views: 99.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:43:10 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (12.6ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (34.2ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
   Rendered admin/shared/_toastr.html.erb (0.4ms)
-Completed 200 OK in 245ms (Views: 133.7ms | ActiveRecord: 0.6ms)
+Completed 200 OK in 87ms (Views: 82.4ms | ActiveRecord: 1.1ms)
 
 
-Started GET "/admin/users/16/edit" for 127.0.0.1 at 2018-11-08 13:14:25 +0700
-Processing by Admin::UsersController#edit as HTML
-  Parameters: {"id"=>"16"}
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1[0m
-  Rendering admin/users/edit.html.erb within layouts/admin
-  Rendered admin/users/edit.html.erb within layouts/admin (3.8ms)
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:43:11 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (14.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (34.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.7ms)
+Completed 200 OK in 92ms (Views: 88.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:43:12 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (8.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (27.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 85ms (Views: 74.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:43:12 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (5.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (26.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 71ms (Views: 67.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:43:13 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (11.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (28.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 97ms (Views: 87.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:43:13 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (5.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (26.1ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
   Rendered admin/shared/_toastr.html.erb (0.4ms)
-Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.5ms)
+Completed 200 OK in 79ms (Views: 75.6ms | ActiveRecord: 1.3ms)
 
 
-Started PUT "/admin/users/16" for 127.0.0.1 at 2018-11-08 13:14:28 +0700
-Processing by Admin::UsersController#update as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ThBcMC5LWVLH7zsuEfk6+ls+MCV78e/oReuSKgUXNXS0LGk7T9Y2JfqY6KfaWRK/SIXTRP4xKsZLngeVBO2eNg==", "user"=>{"email"=>"carletta@rath.info", "username"=>"Bambi Nikolaus", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update", "id"=>"16"}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1[0m
-Completed 500 Internal Server Error in 263ms (ActiveRecord: 0.4ms)
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:43:40 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (5.5ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (28.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 85ms (Views: 79.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 13:43:42 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (2.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (22.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.6ms)
+Completed 200 OK in 93ms (Views: 77.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 13:43:42 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (5.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 13:43:46 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (7.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 68ms (Views: 64.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 13:43:46 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (4.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:43:47 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (6.5ms)
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (58.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.6ms)
+Completed 200 OK in 100ms (Views: 90.9ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:43:48 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (6.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (29.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 81ms (Views: 77.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 13:43:49 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.9ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (7.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 73ms (Views: 69.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 13:43:49 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (5.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.7ms)
+Completed 200 OK in 68ms (Views: 64.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 13:47:48 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (9.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.9ms)
+Completed 200 OK in 72ms (Views: 65.2ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/admin/publisher" for 127.0.0.1 at 2018-11-08 13:47:54 +0700
+Processing by Admin::PublisherController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O9Vs2Z9A7VIMQazCP0puYytXPjJY432D4Q6/i2KxmBHB6VnS/t2CJTE2f0v06kYmOOzdU90juK3veyo0Y0szUw==", "id"=>"", "name"=>"Novel", "commit"=>"Save"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPublisher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `publishers` WHERE `publishers`.`name` = BINARY 'Novel' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/admin/publisher
+Completed 302 Found in 185ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 13:47:54 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (4.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.6ms)
+Completed 200 OK in 148ms (Views: 143.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/publisher" for 127.0.0.1 at 2018-11-08 13:48:08 +0700
+Processing by Admin::PublisherController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zPc1PC3daO+kAAgkIPWta1yGjW55KQokvn5oAZ4Uhn82ywA3TEAHmJl3263rVYUuTz1uD/zpzwqwC/2+n+4tPQ==", "id"=>"", "name"=>"Horror", "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPublisher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `publishers` WHERE `publishers`.`name` = BINARY 'Horror' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `publishers` (`name`, `created_at`, `updated_at`) VALUES ('Horror', '2018-11-08 06:48:08', '2018-11-08 06:48:08')[0m
+  [1m[35m (286.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/publisher
+Completed 302 Found in 296ms (ActiveRecord: 288.2ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 13:48:08 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (6.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 61ms (Views: 56.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-08 14:28:00 +0700
+  [1m[35m (61.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/framgia/.rvm/gems/ruby-2.4.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/framgia/.rvm/gems/ruby-2.4.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (8.7ms)
+Completed 200 OK in 77ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 14:28:08 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (3.7ms)
+  [1m[35m (25.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (1416.9ms)
+Completed 500 Internal Server Error in 1772ms (ActiveRecord: 48.4ms)
 
 
   
-NameError (undefined local variable or method `param' for #<Admin::UsersController:0x00007f69441bfe40>
-Did you mean?  params
-               params=
-               @_params):
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    30:         <img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+    31:       </div>
+    32:       <div class="profile-usertitle">
+    33:         <div class="profile-usertitle-name"><%= current_user.username %></div>
+    34:       </div>
+    35:       <div class="clear"></div>
+    36:     </div>
   
-app/controllers/admin/users_controller.rb:68:in `user_params'
-app/controllers/admin/users_controller.rb:24:in `update'
-Started PUT "/__web_console/repl_sessions/7564159da517f99214b9fccc3e26afa0" for 127.0.0.1 at 2018-11-08 13:15:21 +0700
-Started PUT "/__web_console/repl_sessions/7564159da517f99214b9fccc3e26afa0" for 127.0.0.1 at 2018-11-08 13:15:23 +0700
-Started PUT "/__web_console/repl_sessions/7564159da517f99214b9fccc3e26afa0" for 127.0.0.1 at 2018-11-08 13:15:36 +0700
-Started PUT "/__web_console/repl_sessions/7564159da517f99214b9fccc3e26afa0" for 127.0.0.1 at 2018-11-08 13:15:39 +0700
-Started PUT "/__web_console/repl_sessions/7564159da517f99214b9fccc3e26afa0" for 127.0.0.1 at 2018-11-08 13:15:40 +0700
-Started PUT "/__web_console/repl_sessions/7564159da517f99214b9fccc3e26afa0" for 127.0.0.1 at 2018-11-08 13:15:52 +0700
-Started PUT "/__web_console/repl_sessions/7564159da517f99214b9fccc3e26afa0" for 127.0.0.1 at 2018-11-08 13:16:00 +0700
-Started PUT "/__web_console/repl_sessions/7564159da517f99214b9fccc3e26afa0" for 127.0.0.1 at 2018-11-08 13:16:02 +0700
-Started PUT "/__web_console/repl_sessions/7564159da517f99214b9fccc3e26afa0" for 127.0.0.1 at 2018-11-08 13:16:04 +0700
-Started GET "/admin/users/16" for 127.0.0.1 at 2018-11-08 13:18:04 +0700
+app/views/layouts/admin.html.erb:33:in `_app_views_layouts_admin_html_erb___785675062897441810_25330040'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-08 14:28:17 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise (52.0ms)
+Completed 200 OK in 125ms (Views: 114.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-11-08 14:28:24 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zrriyUTYljKlYcXUgYDiraSi+ZGSNBylsBFzNtQnvIYj6nwNqH0/I5XrvrvlOGa1P2DBzyP7lm+Mnv0Dqklj9Q==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'test@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 264ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-08 14:28:24 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/framgia/.rvm/gems/ruby-2.4.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/framgia/.rvm/gems/ruby-2.4.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 14:28:28 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (4.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (23.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (1.0ms)
+Completed 200 OK in 86ms (Views: 80.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 14:28:31 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  Rendered admin/publisher/index.html.erb within layouts/admin (0.6ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 19.0ms)
+
+
   
-AbstractController::ActionNotFound (The action 'show' could not be found for Admin::UsersController):
+SyntaxError (/home/framgia/training/library-management/app/views/admin/publisher/index.html.erb:26: syntax error, unexpected keyword_end
+ze;@output_buffer.append=( end );@output_buffer.safe_append=
+                              ^
+/home/framgia/training/library-management/app/views/admin/publisher/index.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;             end 
+                         ^
+/home/framgia/training/library-management/app/views/admin/publisher/index.html.erb:53: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/framgia/training/library-management/app/views/admin/publisher/index.html.erb:55: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/admin/publisher/index.html.erb:26: syntax error, unexpected keyword_end
+app/views/admin/publisher/index.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+app/views/admin/publisher/index.html.erb:53: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/admin/publisher/index.html.erb:55: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 14:30:16 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (91.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 170ms (Views: 161.9ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/admin/publisher/2" for 127.0.0.1 at 2018-11-08 14:30:23 +0700
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Admin::PublisherController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started DELETE "/admin/publisher/5" for 127.0.0.1 at 2018-11-08 14:30:54 +0700
+Processing by Admin::PublisherController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qGleDaS+zBvrzaPlAx4Ljh0EseAXkc/pNjW7bDPwJpZq/63NRHw9X1Kk9IzFy3mruYWpHcH0eYS3nWPpogau6w==", "id"=>"5"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `books' for nil:NilClass):
+  
+app/controllers/admin/publisher_controller.rb:29:in `destroy'
+Started PUT "/__web_console/repl_sessions/ff27f71f5612f2e1e56aaa204e615928" for 127.0.0.1 at 2018-11-08 14:31:06 +0700
+Started PUT "/__web_console/repl_sessions/ff27f71f5612f2e1e56aaa204e615928" for 127.0.0.1 at 2018-11-08 14:31:06 +0700
+Started PUT "/__web_console/repl_sessions/ff27f71f5612f2e1e56aaa204e615928" for 127.0.0.1 at 2018-11-08 14:31:38 +0700
+Started PUT "/__web_console/repl_sessions/ff27f71f5612f2e1e56aaa204e615928" for 127.0.0.1 at 2018-11-08 14:31:39 +0700
+Started DELETE "/admin/publisher/5" for 127.0.0.1 at 2018-11-08 14:31:53 +0700
+Processing by Admin::PublisherController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qGleDaS+zBvrzaPlAx4Ljh0EseAXkc/pNjW7bDPwJpZq/63NRHw9X1Kk9IzFy3mruYWpHcH0eYS3nWPpogau6w==", "id"=>"5"}
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` WHERE (5) LIMIT 1[0m
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`publisher_id` = 1[0m
+  [1m[35mSQL (79.5ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 1[0m
+Redirected to http://localhost:3000/admin/publisher
+Completed 302 Found in 244ms (ActiveRecord: 98.4ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 14:31:54 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.8ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (20.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 99ms (Views: 92.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 14:31:58 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (21.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 70ms (Views: 61.8ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` LIMIT 11[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `publishers`.`id` FROM `publishers`[0m
+  [1m[36mPublisher Load (0.7ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` WHERE `publishers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPublisher Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `publishers` WHERE `publishers`.`name` = BINARY 'Undefine' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `publishers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Undefine', '2018-11-08 07:34:17', '2018-11-08 07:34:17')[0m
+  [1m[35m (88.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `publishers`.`id` FROM `publishers`[0m
+  [1m[36mPublisher Load (1.0ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` WHERE `publishers`.`id` = 2 LIMIT 1[0m
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`publisher_id` = 2 LIMIT 11[0m
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`publisher_id` = 2[0m
+Started DELETE "/admin/publisher/5" for 127.0.0.1 at 2018-11-08 14:36:18 +0700
+Processing by Admin::PublisherController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vgSnOUc9yRQnHX6rlJEzOkb++t3w62mOyf0FWvSaYvp8klT5p/84UJ50KcJSREEf4n/iICaO3+NIVd3fZWzqhw==", "id"=>"5"}
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` WHERE (5) LIMIT 1[0m
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`publisher_id` = 1[0m
+  [1m[35mSQL (50.8ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 1[0m
+Redirected to http://localhost:3000/admin/publisher
+Completed 302 Found in 76279ms (ActiveRecord: 53.7ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 14:37:35 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.7ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (11.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 64.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 14:37:42 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (7.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 60ms (Views: 52.3ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/admin/publisher/5" for 127.0.0.1 at 2018-11-08 14:37:44 +0700
+Processing by Admin::PublisherController#destroy as HTML
+  Parameters: {"authenticity_token"=>"flTLs0dKvBzm8pxNQwFU72qnrDO6l7FZVNb5VYroe/68wjhzp4hNWF+byySF1CbKzia0zmzyBzTVfiHQGx7zgw==", "id"=>"5"}
+  [1m[36mPublisher Load (0.9ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` WHERE (5) LIMIT 1[0m
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`publisher_id` = 2[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPublisher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `publishers` WHERE `publishers`.`name` = BINARY 'Undefine' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `publishers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Undefine', '2018-11-08 07:38:41', '2018-11-08 07:38:41')[0m
+  [1m[35m (80.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (54.1ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 2[0m
+Redirected to http://localhost:3000/admin/publisher
+Completed 302 Found in 66721ms (ActiveRecord: 139.3ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 14:38:51 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.9ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (10.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 49.0ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/admin/publisher/3" for 127.0.0.1 at 2018-11-08 14:38:55 +0700
+Processing by Admin::PublisherController#destroy as HTML
+  Parameters: {"authenticity_token"=>"q/CSP7KQ8zEZ0IZ2j8iZzCuvnR1o8PIGSUEpTbPfUFhpZmH/UlICdaC50R9JHevpjy6F4L6VRGvI6fHIIinYJQ==", "id"=>"3"}
+  [1m[36mPublisher Load (0.5ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` WHERE (3) LIMIT 1[0m
+  [1m[36mBook Load (1.9ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`publisher_id` = 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPublisher Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM `publishers` WHERE `publishers`.`name` = BINARY 'Undefine' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35mSQL (89.0ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 1[0m
+Redirected to http://localhost:3000/admin/publisher
+Completed 302 Found in 48658ms (ActiveRecord: 93.2ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 14:40:17 +0700
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (390.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 460ms (Views: 448.5ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/admin/publisher/3" for 127.0.0.1 at 2018-11-08 14:40:21 +0700
+Processing by Admin::PublisherController#destroy as HTML
+  Parameters: {"authenticity_token"=>"INmiaaYGbLqX47aBaRIhci8ivsA5s5hkfnkqOzCnhW7iT1GpRsSd/i6K4eivx1NXi6OmPe/WLgn/0fK+oVENEw==", "id"=>"3"}
+  [1m[36mPublisher Load (0.8ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` WHERE `publishers`.`id` = 3 LIMIT 1[0m
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`publisher_id` = 3[0m
+  [1m[35mSQL (46.1ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 3[0m
+Redirected to http://localhost:3000/admin/publisher
+Completed 302 Found in 70ms (ActiveRecord: 47.6ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 14:40:21 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (8.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 56.1ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mPublisher Load (0.5ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` LIMIT 11[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPublisher Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `publishers` WHERE `publishers`.`name` = BINARY 'undefine' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `publishers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'undefine', '2018-11-08 07:40:56', '2018-11-08 07:40:56')[0m
+  [1m[35m (78.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/admin/publisher?utf8=%E2%9C%93&authenticity_token=i1Fb%2BweB2RnZsarMy%2FXBooZ5qjEauImQeYBf46R55zJJx6g750MoXWDY%2FaUNILOHIviyzMzdP%2F34KIdmNY9vTw%3D%3D&id=5&name=Horror123&commit=Save" for 127.0.0.1 at 2018-11-08 14:41:13 +0700
+Processing by Admin::PublisherController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i1Fb+weB2RnZsarMy/XBooZ5qjEauImQeYBf46R55zJJx6g750MoXWDY/aUNILOHIviyzMzdP/34KIdmNY9vTw==", "id"=>"5", "name"=>"Horror123", "commit"=>"Save"}
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (7.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.8ms)
+Completed 200 OK in 51ms (Views: 47.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/publisher?utf8=%E2%9C%93&authenticity_token=i1Fb%2BweB2RnZsarMy%2FXBooZ5qjEauImQeYBf46R55zJJx6g750MoXWDY%2FaUNILOHIviyzMzdP%2F34KIdmNY9vTw%3D%3D&id=5&name=Horror123&commit=Save" for 127.0.0.1 at 2018-11-08 14:41:30 +0700
+Processing by Admin::PublisherController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i1Fb+weB2RnZsarMy/XBooZ5qjEauImQeYBf46R55zJJx6g750MoXWDY/aUNILOHIviyzMzdP/34KIdmNY9vTw==", "id"=>"5", "name"=>"Horror123", "commit"=>"Save"}
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (3.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/publisher?utf8=%E2%9C%93&authenticity_token=YKUxUg5tSLKMDbcjnyX%2BA%2FYgMKnCNsxAmIXW3TZj19%2BiM8KS7q%2B59jVk4EpZ8IwmUqEoVBRTei0ZLQ5Yp5Vfog%3D%3D&id=4&name=Thrilling+123&commit=Save" for 127.0.0.1 at 2018-11-08 14:41:50 +0700
+Processing by Admin::PublisherController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YKUxUg5tSLKMDbcjnyX+A/YgMKnCNsxAmIXW3TZj19+iM8KS7q+59jVk4EpZ8IwmUqEoVBRTei0ZLQ5Yp5Vfog==", "id"=>"4", "name"=>"Thrilling 123", "commit"=>"Save"}
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (9.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 51.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-08 15:03:56 +0700
+  [1m[35m (59.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/framgia/.rvm/gems/ruby-2.4.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/framgia/.rvm/gems/ruby-2.4.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (11.6ms)
+Completed 200 OK in 53ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 15:03:58 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (5.1ms)
+  [1m[35m (24.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (1301.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 1599ms (Views: 1418.5ms | ActiveRecord: 137.3ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 15:04:02 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (23.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 93ms (Views: 54.7ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 15:04:03 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.2ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (4.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/publisher?utf8=%E2%9C%93&authenticity_token=qtfVsqrMduqY141BGLKCoo3KAcSn7C4J3W3qHf0Ls%2FNoQSZySg6HriG%2B2ijeZ%2FCHKUsZOXGJmGRcxTKYbP07jg%3D%3D&id=4&name=Thrilling+123&commit=Save" for 127.0.0.1 at 2018-11-08 15:04:10 +0700
+Processing by Admin::PublisherController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qtfVsqrMduqY141BGLKCoo3KAcSn7C4J3W3qHf0Ls/NoQSZySg6HriG+2ijeZ/CHKUsZOXGJmGRcxTKYbP07jg==", "id"=>"4", "name"=>"Thrilling 123", "commit"=>"Save"}
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (1.1ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (16.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 104ms (Views: 96.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/publisher?utf8=%E2%9C%93&authenticity_token=ZpQmvXLg%2BJZowlDxCXfNQAHjVTFUyxFO0rquKCapUzSkAtV9kiIJ0tGrB5jPor9lpWJNzIKupyNTEnatt1%2FbSQ%3D%3D&id=4&name=Thrilling+123&commit=Save" for 127.0.0.1 at 2018-11-08 15:04:54 +0700
+Processing by Admin::PublisherController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZpQmvXLg+JZowlDxCXfNQAHjVTFUyxFO0rquKCapUzSkAtV9kiIJ0tGrB5jPor9lpWJNzIKupyNTEnatt1/bSQ==", "id"=>"4", "name"=>"Thrilling 123", "commit"=>"Save"}
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (1.2ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (17.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 83ms (Views: 73.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/publisher/4?utf8=%E2%9C%93&authenticity_token=3uGLKwaPy0ty1c5KTBoC1K1RZ6dBiHLDoGW7RjyBBPIcd3jr5k06D8u8mSOKz3DxCdB%2FWpftxK4hzWPDrXeMjw%3D%3D&id=4&name=Thrilling+123&commit=Save" for 127.0.0.1 at 2018-11-08 15:09:18 +0700
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Admin::PublisherController):
   
 actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
 actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
@@ -1116,47 +2317,977 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-Started GET "/admin/users/16/edit" for 127.0.0.1 at 2018-11-08 13:18:10 +0700
-Processing by Admin::UsersController#edit as HTML
-  Parameters: {"id"=>"16"}
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1[0m
-  Rendering admin/users/edit.html.erb within layouts/admin
-  Rendered admin/users/edit.html.erb within layouts/admin (10.5ms)
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  Rendered admin/shared/_toastr.html.erb (0.4ms)
-Completed 200 OK in 259ms (Views: 148.4ms | ActiveRecord: 3.9ms)
+Started GET "/admin/publisher/" for 127.0.0.1 at 2018-11-08 15:09:28 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (4.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 0.6ms)
 
 
-Started PUT "/admin/users/16" for 127.0.0.1 at 2018-11-08 13:18:14 +0700
-Processing by Admin::UsersController#update as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3S+Aj07RHgJYRgDWmxyvdJTwCjtMvE765vi4zLFHLl0nE7WEL0xxdWUx019QvIcxh0vpWsl8i9TojS1zsL2FHw==", "user"=>{"email"=>"carletta@rath.info", "username"=>"Bambi Nikolaus", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update", "id"=>"16"}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1[0m
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (62.0ms)[0m  [1m[33mUPDATE `users` SET `username` = 'Bambi Nikolaus', `updated_at` = '2018-11-08 06:18:14' WHERE `users`.`id` = 16[0m
-  [1m[35m (262.7ms)[0m  [1m[35mCOMMIT[0m
-Redirected to http://localhost:3000/admin/users
-Completed 302 Found in 414ms (ActiveRecord: 325.4ms)
+Started GET "/" for 127.0.0.1 at 2018-11-08 15:19:18 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/framgia/.rvm/gems/ruby-2.4.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/framgia/.rvm/gems/ruby-2.4.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (5.3ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 13:18:14 +0700
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-08 15:19:22 +0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 15:19:27 +0700
 Processing by Admin::UsersController#index as HTML
   Rendering admin/users/index.html.erb within layouts/admin
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
-  Rendered collection of admin/users/_user.html.erb [10 times] (8.0ms)
-  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
-  Rendered admin/users/index.html.erb within layouts/admin (36.4ms)
+  Rendered collection of admin/users/_user.html.erb [10 times] (3.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (21.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 15:19:28 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (1.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (41.7ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"admin/publisher"}, missing required keys: [:id]):
+    35:   <div class="col-md-6">
+    36:     <div class="panel panel-default">
+    37:       <div class="panel-body">
+    38:         <%= form_tag admin_publisher_path, method: :put do %>
+    39:           <%= hidden_field_tag :id %>
+    40:           <div class="form-group">
+    41:             <%= label_tag :name %>
+  
+app/views/admin/publisher/index.html.erb:38:in `_app_views_admin_publisher_index_html_erb___487546388101971302_40577460'
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 15:19:49 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (6.2ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
-  Rendered admin/shared/_toastr.html.erb (1.1ms)
-Completed 200 OK in 88ms (Views: 84.8ms | ActiveRecord: 1.2ms)
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 45.6ms | ActiveRecord: 0.6ms)
 
 
-Started GET "/admin/users.csv?q[username_cont]=&q[is_admin_eq]=" for 127.0.0.1 at 2018-11-08 13:20:01 +0700
-Processing by Admin::UsersController#index as CSV
-  Parameters: {"q"=>{"username_cont"=>"", "is_admin_eq"=>""}}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT DISTINCT `users`.* FROM `users`[0m
-  Rendering text template
-  Rendered text template (0.0ms)
-Sent data  (64.2ms)
-Completed 200 OK in 114ms (Views: 63.9ms | ActiveRecord: 0.5ms)
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 15:20:17 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (6.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 15:20:42 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (4.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 15:22:30 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (1.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (20.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 88ms (Views: 79.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 15:23:02 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` DESC LIMIT 1[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (8.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 55.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/publisher/5?utf8=%E2%9C%93&authenticity_token=QCYF1l9KTS7tOR%2BAJAM02A3xNAMovdWpBCeo%2BI65wLSCsPYWv4i8alRQSOni1kb9qXAs%2Fv7YY8SFj3B9H09IyQ%3D%3D&id=5&name=Horror+123&commit=Save" for 127.0.0.1 at 2018-11-08 15:23:15 +0700
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Admin::PublisherController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/publisher/5?utf8=%E2%9C%93&authenticity_token=QCYF1l9KTS7tOR%2BAJAM02A3xNAMovdWpBCeo%2BI65wLSCsPYWv4i8alRQSOni1kb9qXAs%2Fv7YY8SFj3B9H09IyQ%3D%3D&id=5&name=Horror+123&commit=Save" for 127.0.0.1 at 2018-11-08 15:23:54 +0700
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Admin::PublisherController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/admin/publisher/5" for 127.0.0.1 at 2018-11-08 15:27:04 +0700
+  
+ActionController::RoutingError (No route matches [POST] "/admin/publisher/5"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 15:27:12 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (8.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/publisher" for 127.0.0.1 at 2018-11-08 15:27:19 +0700
+Processing by Admin::PublisherController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tO/uXGFMj/9kd9BbJzjcheQybVnT07Ni0dqRSqtg2fF2eR2cgY5+u90ehzLh7a6gQLN1pAW2BQ9QcknPOpZRjA==", "id"=>"", "name"=>"123456", "commit"=>"Save"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPublisher Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `publishers` WHERE `publishers`.`name` = BINARY '123456' LIMIT 1[0m
+  [1m[35mSQL (28.3ms)[0m  [1m[32mINSERT INTO `publishers` (`name`, `created_at`, `updated_at`) VALUES ('123456', '2018-11-08 08:27:20', '2018-11-08 08:27:20')[0m
+  [1m[35m (57.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/publisher
+Completed 302 Found in 164ms (ActiveRecord: 87.3ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 15:27:20 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.7ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (12.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 74ms (Views: 65.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 15:27:57 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (7.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 50ms (Views: 44.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/publisher/" for 127.0.0.1 at 2018-11-08 15:40:50 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (7.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 48.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/publisher?utf8=%E2%9C%93&authenticity_token=eM3gYaCn5QORG6SHAqpmGZU0X9d1ACT0UF8SXfjNR4K6WxOhQGUURyhy8%2B7EfxQ8MbVHKqNlkpnR98rYaTvP%2Fw%3D%3D&id=4&name=Thrilling+123&commit=Save" for 127.0.0.1 at 2018-11-08 15:41:00 +0700
+Processing by Admin::PublisherController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eM3gYaCn5QORG6SHAqpmGZU0X9d1ACT0UF8SXfjNR4K6WxOhQGUURyhy8+7EfxQ8MbVHKqNlkpnR98rYaTvP/w==", "id"=>"4", "name"=>"Thrilling 123", "commit"=>"Save"}
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.7ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (15.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 82ms (Views: 75.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 15:43:40 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.6ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (106.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 309ms (Views: 303.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/publisher/5?utf8=%E2%9C%93&authenticity_token=j5t63bxP524a97oNo5lQrLw7R7eYtgYOhiM3xMor0NRNDYkdXI0WKqOe7WRlTCKJGLpfSk7TsGMHi%2B9BW91YqQ%3D%3D&id=5&name=Horror+123&commit=Save" for 127.0.0.1 at 2018-11-08 15:43:52 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/admin/publisher/5"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 15:49:31 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (15.3ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (48.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 117ms (Views: 100.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 15:49:31 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (4.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (19.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 68.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/users?utf8=%E2%9C%93&q%5Busername_cont%5D=&q%5Bis_admin_eq%5D=true&commit=Search" for 127.0.0.1 at 2018-11-08 15:49:37 +0700
+Processing by Admin::UsersController#index as JS
+  Parameters: {"utf8"=>"✓", "q"=>{"username_cont"=>"", "is_admin_eq"=>"true"}, "commit"=>"Search"}
+  Rendering admin/users/index.js.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` WHERE `users`.`is_admin` = 1 LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [2 times] (2.3ms)
+  Rendered admin/users/index.js.erb (9.2ms)
+Completed 200 OK in 39ms (Views: 18.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/users?utf8=%E2%9C%93&q%5Busername_cont%5D=&q%5Bis_admin_eq%5D=false&commit=Search" for 127.0.0.1 at 2018-11-08 15:49:40 +0700
+Processing by Admin::UsersController#index as JS
+  Parameters: {"utf8"=>"✓", "q"=>{"username_cont"=>"", "is_admin_eq"=>"false"}, "commit"=>"Search"}
+  Rendering admin/users/index.js.erb
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` WHERE `users`.`is_admin` = 0 LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (7.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users` WHERE `users`.`is_admin` = 0[0m
+  Rendered admin/users/index.js.erb (27.9ms)
+Completed 200 OK in 55ms (Views: 42.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:00:33 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.7ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  [1m[36mPublisher Load (0.6ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` DESC LIMIT 1[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (11.7ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (Missing block):
+    35:   <div class="col-md-6">
+    36:     <div class="panel panel-default">
+    37:       <div class="panel-body">
+    38:         <%= form_for Publisher.last %>
+    39:         <%= form_tag do %>
+    40:           <%= hidden_field_tag :id %>
+    41:           <div class="form-group">
+  
+app/views/admin/publisher/index.html.erb:38:in `_app_views_admin_publisher_index_html_erb___487546388101971302_69999160738120'
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:01:57 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` DESC LIMIT 1[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (193.8ms)
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `publisher_path' for #<#<Class:0x00007f53e0022250>:0x00007f53e51fceb8>
+Did you mean?  public_method):
+    35:   <div class="col-md-6">
+    36:     <div class="panel panel-default">
+    37:       <div class="panel-body">
+    38:         <%= form_for Publisher.last do %>
+    39:         <% end %>
+    40:         <%= form_tag do %>
+    41:           <%= hidden_field_tag :id %>
+  
+app/views/admin/publisher/index.html.erb:38:in `_app_views_admin_publisher_index_html_erb___487546388101971302_69999151543740'
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:02:44 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (1.7ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  [1m[36mPublisher Load (0.7ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` DESC LIMIT 1[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (12.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"update", :controller=>"admin/publisher"}, missing required keys: [:id]):
+    35:   <div class="col-md-6">
+    36:     <div class="panel panel-default">
+    37:       <div class="panel-body">
+    38:         <%= form_for Publisher.last, url: admin_publisher_path do %>
+    39:         <% end %>
+    40:         <%= form_tag do %>
+    41:           <%= hidden_field_tag :id %>
+  
+app/views/admin/publisher/index.html.erb:38:in `_app_views_admin_publisher_index_html_erb___487546388101971302_69999008861480'
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:03:05 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` DESC LIMIT 1[0m
+  [1m[36mCACHE Publisher Load (0.0ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` DESC LIMIT 1[0m  [["LIMIT", 1]]
+  Rendered admin/publisher/index.html.erb within layouts/admin (9.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 42.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:03:33 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.9ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  [1m[36mPublisher Load (0.6ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` DESC LIMIT 1[0m
+  [1m[36mCACHE Publisher Load (0.0ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` DESC LIMIT 1[0m  [["LIMIT", 1]]
+  Rendered admin/publisher/index.html.erb within layouts/admin (21.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 87ms (Views: 80.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:06:20 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (11.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 62ms (Views: 56.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:06:49 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (5.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:07:57 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.7ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (27.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 147ms (Views: 139.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:08:12 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (8.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 103.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/publisher/6?utf8=%E2%9C%93&authenticity_token=I9W3ICIfF%2FBwM88NMd8sXGwriHFJMcKT%2FZ5MpCxibanhQ0Tgwt3mtMlamGT3Cl55yKqQjJ9UdP58NpQhvZTl1A%3D%3D&id=6&_method=put&name=1234567&commit=Save" for 127.0.0.1 at 2018-11-08 16:08:22 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/admin/publisher/6"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:08:48 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (8.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 103.3ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/admin/publisher/6" for 127.0.0.1 at 2018-11-08 16:08:57 +0700
+Processing by Admin::PublisherController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8bOjy4mPe+8HWmjnlzPDitnJOlgb+5RQuCwfQt2o+QIzJVALaU2Kq74zP45R5rGvfUgipc2eIj05hMfHTF5xfw==", "id"=>"6", "name"=>"1234567", "commit"=>"Save"}
+  [1m[36mPublisher Load (0.8ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` WHERE `publishers`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPublisher Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `publishers` WHERE `publishers`.`name` = BINARY '1234567' AND (`publishers`.`id` != 6) LIMIT 1[0m
+  [1m[35mSQL (15.9ms)[0m  [1m[33mUPDATE `publishers` SET `name` = '1234567', `updated_at` = '2018-11-08 09:08:57' WHERE `publishers`.`id` = 6[0m
+  [1m[35m (66.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/publisher
+Completed 302 Found in 146ms (ActiveRecord: 84.9ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:08:57 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.6ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (8.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 71ms (Views: 66.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:09:14 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (5.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 40.7ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/admin/publisher/6" for 127.0.0.1 at 2018-11-08 16:09:20 +0700
+Processing by Admin::PublisherController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nv3wjSJ2/gOV9Ir7ZrApu+nEFlWblM76fwcAP2OemZH0awNNwrQPRyyd3ZKgZVueTUUOqE3xeJf+r9i68mgR7A==", "id"=>"6", "name"=>"12345678", "commit"=>"Save"}
+  [1m[36mPublisher Load (0.7ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` WHERE `publishers`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPublisher Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `publishers` WHERE `publishers`.`name` = BINARY '12345678' AND (`publishers`.`id` != 6) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE `publishers` SET `name` = '12345678', `updated_at` = '2018-11-08 09:09:20' WHERE `publishers`.`id` = 6[0m
+  [1m[35m (556.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/publisher
+Completed 302 Found in 575ms (ActiveRecord: 559.3ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:09:20 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (1.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (16.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 75ms (Views: 68.0ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:09:32 +0700
+Processing by Admin::PublisherController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aprNS4uKRF+ylTE+bzJwxAPzT1EBg7VSSTvIR4Iv38+oDD6La0i1Gwv8Zlep5wLhp3JXrNfmAz/IkxDCE9lXsg==", "id"=>"", "name"=>"tttasd", "commit"=>"Save"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPublisher Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `publishers` WHERE `publishers`.`name` = BINARY 'tttasd' LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO `publishers` (`name`, `created_at`, `updated_at`) VALUES ('tttasd', '2018-11-08 09:09:32', '2018-11-08 09:09:32')[0m
+  [1m[35m (156.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/publisher
+Completed 302 Found in 179ms (ActiveRecord: 159.0ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:09:32 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.9ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (15.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 82ms (Views: 76.1ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/admin/publisher/7" for 127.0.0.1 at 2018-11-08 16:09:34 +0700
+Processing by Admin::PublisherController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4ZWYkSojG+E0D7hxqpBD6Dr+GxGj0H9xJeBGwvyoPxkjA2tRyuHqpY1m7xhsRTHNnn8D7HW1yRykSJ5HbV63ZA==", "id"=>"7"}
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` WHERE `publishers`.`id` = 7 LIMIT 1[0m
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`publisher_id` = 7[0m
+  [1m[35mSQL (42.3ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 7[0m
+Redirected to http://localhost:3000/admin/publisher
+Completed 302 Found in 214ms (ActiveRecord: 94.1ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:09:34 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (7.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 47.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/admin/publisher/6" for 127.0.0.1 at 2018-11-08 16:09:36 +0700
+Processing by Admin::PublisherController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tec2mT6aru7uligrZEroBYwoM+lZpIRnH89IXB9/h3l3ccVZ3lhfqlf/f0Kin5ogKKkrFI/BMgqeZ5DZjokPBA==", "id"=>"6"}
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` WHERE `publishers`.`id` = 6 LIMIT 1[0m
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`publisher_id` = 6[0m
+  [1m[35mSQL (34.8ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 6[0m
+Redirected to http://localhost:3000/admin/publisher
+Completed 302 Found in 42ms (ActiveRecord: 35.6ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:09:36 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.9ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (15.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 103ms (Views: 95.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 16:23:13 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (3.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (23.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 58ms (Views: 53.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:23:16 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (10.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 65.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-08 16:23:16 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.2ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE (`publishers`.`id` != 1)[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (3.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 16:23:17 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (13.0ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (40.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 104ms (Views: 94.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-08 16:23:17 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (5.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (17.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (37.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` ASC LIMIT 1[0m
+  [1m[36mPublisher Load (0.2ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` LIMIT 11[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` ORDER BY `categories`.`id` ASC LIMIT 1[0m
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` ORDER BY `categories`.`id` ASC LIMIT 1[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` ORDER BY `categories`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES ('test', '2018-11-09 01:20:59', '2018-11-09 01:20:59')[0m
+  [1m[35m (83.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` ORDER BY `categories`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (2.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` ORDER BY `categories`.`id` ASC LIMIT 1[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`parent_id` = 1 LIMIT 11[0m
+  [1m[36mPublisher Load (0.9ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `authors` (`created_at`, `updated_at`) VALUES ('2018-11-09 01:25:14', '2018-11-09 01:25:14')[0m
+  [1m[35m (73.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT  `authors`.* FROM `authors` WHERE `authors`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `books` (`name`, `page_number`, `category_id`, `author_id`, `publisher_id`, `created_at`, `updated_at`) VALUES ('test', 10, 1, 1, 1, '2018-11-09 01:25:38', '2018-11-09 01:25:38')[0m
+  [1m[35m (31.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPublisher Load (0.8ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` ASC LIMIT 1[0m
+  [1m[35mSQL (75.8ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 1[0m
+  [1m[36mPublisher Load (0.8ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` ASC LIMIT 1[0m
+  [1m[35mSQL (70.3ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 1[0m
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` ASC LIMIT 1[0m
+  [1m[35mSQL (40.3ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 1[0m
+  [1m[36mPublisher Load (0.9ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` ASC LIMIT 1[0m
+  [1m[35mSQL (77.3ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mPublisher Load (0.2ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` ASC LIMIT 1[0m
+  [1m[35mSQL (522.7ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 1[0m
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` ASC LIMIT 1[0m
+  [1m[35mSQL (45.5ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 1[0m
+  [1m[36mPublisher Load (0.7ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` ASC LIMIT 1[0m
+  [1m[35mSQL (197.7ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 1[0m
+  [1m[36mPublisher Load (0.7ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` ORDER BY `publishers`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPublisher Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM `publishers` WHERE `publishers`.`name` = BINARY 'undefine1' AND (`publishers`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (9.7ms)[0m  [1m[33mUPDATE `publishers` SET `name` = 'undefine1', `updated_at` = '2018-11-09 01:34:36' WHERE `publishers`.`id` = 1[0m
+  [1m[35m (52.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  `books`.* FROM `books` WHERE `books`.`publisher_id` = 1 LIMIT 11[0m
+  [1m[35mSQL (45.5ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 1[0m
+Started GET "/" for 127.0.0.1 at 2018-11-09 08:38:32 +0700
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/framgia/.rvm/gems/ruby-2.4.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/framgia/.rvm/gems/ruby-2.4.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (12.0ms)
+Completed 200 OK in 59ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-09 08:38:51 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (4.9ms)
+  [1m[35m (22.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (1231.1ms)
+Completed 500 Internal Server Error in 1456ms (ActiveRecord: 27.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    30:         <img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+    31:       </div>
+    32:       <div class="profile-usertitle">
+    33:         <div class="profile-usertitle-name"><%= current_user.username %></div>
+    34:       </div>
+    35:       <div class="clear"></div>
+    36:     </div>
+  
+app/views/layouts/admin.html.erb:33:in `_app_views_layouts_admin_html_erb__2212121034681050079_26376760'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-09 08:39:00 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise (40.0ms)
+Completed 200 OK in 113ms (Views: 101.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-11-09 08:39:04 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vAKcRzBwbB7bsUtIG3JhRLb55RZvnKTl98mfaFDkvgls6okFfdK6TpEl7K2OAX5KUGNgg/FyK18L4G8SapioIQ==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'test@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 283ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-09 08:39:04 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/framgia/.rvm/gems/ruby-2.4.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/framgia/.rvm/gems/ruby-2.4.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-09 08:39:09 +0700
+Processing by Admin::UsersController#index as HTML
+  Rendering admin/users/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT `users`.* FROM `users` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/users/_user.html.erb [10 times] (9.6ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT `users`.`id`) FROM `users`[0m
+  Rendered admin/users/index.html.erb within layouts/admin (32.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (2.0ms)
+Completed 200 OK in 137ms (Views: 132.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-09 08:39:11 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (1.8ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (148.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.7ms)
+Completed 200 OK in 329ms (Views: 260.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-09 08:39:11 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.2ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (4.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/admin/publisher/1" for 127.0.0.1 at 2018-11-09 08:39:15 +0700
+Processing by Admin::PublisherController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6G0czu02tPJHHpofR+X/V3jzpiomwQctvM5ON+gPKMHa4S0PJ+c13tHLG+5FlBlBBC9pIMTUeDPmYRoLBlZ37w==", "id"=>"1"}
+  [1m[36mPublisher Load (0.4ms)[0m  [1m[34mSELECT  `publishers`.* FROM `publishers` WHERE `publishers`.`id` = 1 LIMIT 1[0m
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`publisher_id` = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  `authors`.* FROM `authors` WHERE `authors`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `books` SET `publisher_id` = NULL, `updated_at` = '2018-11-09 01:39:15' WHERE `books`.`id` = 1[0m
+  [1m[35m (75.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (88.8ms)[0m  [1m[31mDELETE FROM `publishers` WHERE `publishers`.`id` = 1[0m
+Redirected to http://localhost:3000/admin/publisher
+Completed 302 Found in 223ms (ActiveRecord: 168.7ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-09 08:39:15 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.7ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (8.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 46.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-09 08:41:39 +0700
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (389.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 470ms (Views: 457.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-09 08:42:16 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (5.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.5ms)
+Completed 200 OK in 47ms (Views: 43.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-09 09:09:04 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.2ms)[0m  [1m[34mSELECT  `publishers`.`id`, `publishers`.`name` FROM `publishers` LIMIT 10 OFFSET 0[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (255.3ms)
+Completed 500 Internal Server Error in 261ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for nil:NilClass):
+    26:             <% end %>
+    27:           </tbody>
+    28:         </table>
+    29:         <%= paginate @publisers %>
+    30:       </div>
+    31:     </div>
+    32:   </div>
+  
+app/views/admin/publisher/index.html.erb:29:in `_app_views_admin_publisher_index_html_erb__3738206268491350790_70181515205860'
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-09 09:09:34 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (0.3ms)[0m  [1m[34mSELECT  `publishers`.`id`, `publishers`.`name` FROM `publishers` LIMIT 10 OFFSET 0[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (24.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 206ms (Views: 203.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-09 09:10:59 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  Rendered admin/publisher/index.html.erb within layouts/admin (3.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/framgia/training/library-management/app/views/admin/publisher/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/admin/publisher/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/admin/publisher" for 127.0.0.1 at 2018-11-09 09:11:10 +0700
+Processing by Admin::PublisherController#index as HTML
+  Rendering admin/publisher/index.html.erb within layouts/admin
+  [1m[36mPublisher Load (1.0ms)[0m  [1m[34mSELECT  `publishers`.`id`, `publishers`.`name` FROM `publishers` LIMIT 10 OFFSET 0[0m
+  Rendered admin/publisher/index.html.erb within layouts/admin (22.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered admin/shared/_toastr.html.erb (0.3ms)
+Completed 200 OK in 99ms (Views: 92.8ms | ActiveRecord: 1.3ms)
 
 
