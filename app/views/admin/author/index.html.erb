@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <table class="table table-hover table-striped">
+          <tbody>
+            <tr id="new">
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-primary">
+                  <%= t "admin.new_author" %>
+                </button>
+              </td>
+            </tr>
+            <% @authors.each do |p| %>
+              <tr id="row_<%= p.id %>">
+                <td id="id"><%= p.id %></td>
+                <td id="value"><%= p.name %></td>
+                <td id="describe" class="hidden"><%= p.describe %></td>
+                <td>
+                  <%= link_to t("admin.delete"), admin_author_path(p),
+                    method: :delete, class: "btn btn-danger" %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= paginate @authors %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= form_tag do %>
+          <%= hidden_field_tag :id %>
+          <%= hidden_field_tag :_method, "post" %>
+          <div class="form-group">
+            <%= label_tag :name %>
+            <%= text_field_tag :name, "", class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= label_tag :describe %>
+            <%= text_area_tag :describe, "", class: "form-control" %>
+          </div>
+          <%= submit_tag t("admin.save"),
+            class: "btn btn-primary btn-md pull-right" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag "admin/author", "data-turbolinks-track": "reload" %>

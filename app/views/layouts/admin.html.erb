@@ -6,7 +6,7 @@
   <title><%= t "nameproject" %></title>
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
-  <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+  <%= javascript_include_tag "admin/admin-all", "data-turbolinks-track": "reload" %>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 </head>
 <body>
@@ -47,6 +47,11 @@
         <% end %>
       </li>
       <li>
+        <%= link_to admin_author_index_path do %>
+          <em class="fa fa-clone"> </em> Author
+        <% end %>
+      </li>
+      <li>
         <%= link_to destroy_user_session_path, method: :delete do %>
           <em class="fa fa-power-off">&nbsp;</em> Logout
         <% end %>
@@ -56,7 +61,7 @@
   <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
     <%= yield %>
   </div>
-  <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+  <%= javascript_include_tag "admin/admin-all", "data-turbolinks-track": "reload" %>
   <%= render "admin/shared/toastr" %>
 </body>
 </html>

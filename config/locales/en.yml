@@ -12,6 +12,7 @@ en:
     delete_success: "Deleted success"
     user_not_found: "User not found"
     publisher_not_found: "Publisher not found"
+    author_not_found: "Author not found"
     update_success: "Update success"
     can_not_update: "Can not update"
     admin: "Admin"
@@ -21,3 +22,4 @@ en:
     export: "Export"
     search: "Search"
     new_publisher: "New Publisher"
+    new_author: "New Author"

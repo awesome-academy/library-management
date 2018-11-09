@@ -1,0 +1,12 @@
+//= require rails-ujs
+//= require turbolinks
+//= require toastr
+//= require admin/bootstrap
+//= require admin/bootstrap-datepicker
+//= require admin/bootstrap-treeview
+//= require admin/chart.min
+//= require admin/chart-data
+//= require admin/easypiechart
+//= require admin/easypiechart-data
+//= require admin/jquery-1.11.1.min
+//= require admin/lumino.glyphs
