@@ -10,6 +10,7 @@ class Book < ApplicationRecord
   mount_uploader :image, PictureUploader
   validates :page_number, numericality: { only_integer: true, other_than: 0 }
   validate  :picture_size
+  scope :order_by_created_at_desc, -> {order created_at: :desc}
 
   def self.to_csv books
     require "csv"

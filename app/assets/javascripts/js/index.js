@@ -1,6 +1,8 @@
-//= require js/jquery/jquery-2.2.4.min
+//= require jquery
+//= require jquery_ujs
 //= require js/popper.min
 //= require js/bootstrap.min
 //= require js/x_plugins
 //= require js/classy-nav.min
 //= require js/x_active
+//= require js/borrow

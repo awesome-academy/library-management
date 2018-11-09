@@ -1,0 +1,24 @@
+<div class="col-12 col-md-8 col-lg-9">
+  <div class="shop_grid_product_area">
+    <div class="row">
+      <div class="col-12">
+        <div class="product-topbar d-flex align-items-center justify-content-between">
+          <div class="total-products">
+            <p><span><%= @books.count %></span> <%= t "client.products_found" %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <% @books.each do |book| %>
+        <% @book = book %>
+        <%= render partial: "books/book"%>
+      <% end %>
+    </div>
+  </div>
+  <nav aria-label="navigation">
+    <ul class="pagination mt-50 mb-70">
+      <%= paginate @books, remote: true %>
+    </ul>
+  </nav>
+</div>

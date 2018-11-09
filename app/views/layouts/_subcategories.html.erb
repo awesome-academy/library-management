@@ -1,0 +1,5 @@
+<% subcategories.each do |sub| %>
+  <li>
+    <%= link_to sub.name, category_path(sub.id)%>
+  </li>
+<% end %>
