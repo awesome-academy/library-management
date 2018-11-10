@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-  belongs_to :category
+  belongs_to :category, optional: true
   belongs_to :author, optional: true
   belongs_to :publisher, optional: true
   has_many :borrow_books

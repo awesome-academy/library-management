@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     end
     resources :publisher, except: %i(new edit show)
     resources :author, except: %i(new edit show)
+    resources :categories
   end
   devise_for :users, :controllers => {:registrations => "registrations"}
 end
