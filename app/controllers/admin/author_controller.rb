@@ -11,7 +11,7 @@ class Admin::AuthorController < Admin::AdminBaseController
     if @author.save
       flash[:success] = t "admin.create_success"
     else
-      flash[:error] = t "admin.can_not_create"
+      flash[:error] = @author.errors.full_messages
     end
     redirect_to admin_author_index_path
   end
@@ -20,7 +20,7 @@ class Admin::AuthorController < Admin::AdminBaseController
     if @author.update author_param
       flash[:success] = t "admin.update_success"
     else
-      flash[:error] = t "admin.can_not_update"
+      flash[:error] = @author.errors.full_messages
     end
     redirect_to admin_author_index_path
   end
@@ -30,7 +30,7 @@ class Admin::AuthorController < Admin::AdminBaseController
     if @author.delete
       flash[:success] = t "admin.delete_success"
     else
-      flash[:error] = t "admin.can_not_delete"
+      flash[:error] = @author.errors.full_messages
     end
     redirect_to admin_author_index_path
   end

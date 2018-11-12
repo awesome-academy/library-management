@@ -11,7 +11,7 @@ class Admin::PublisherController < Admin::AdminBaseController
     if @publisher.save
       flash[:success] = t "admin.create_success"
     else
-      flash[:error] = t "admin.can_not_create"
+      flash[:error] = @publisher.errors.full_messages
     end
     redirect_to admin_publisher_index_path
   end
@@ -20,7 +20,7 @@ class Admin::PublisherController < Admin::AdminBaseController
     if @publisher.update name: params[:name]
       flash[:success] = t "admin.update_success"
     else
-      flash[:error] = t "admin.can_not_update"
+      flash[:error] = @publisher.errors.full_messages
     end
     redirect_to admin_publisher_index_path
   end
@@ -30,7 +30,7 @@ class Admin::PublisherController < Admin::AdminBaseController
     if @publisher.delete
       flash[:success] = t "admin.delete_success"
     else
-      flash[:error] = t "admin.can_not_delete"
+      flash[:error] = @publisher.errors.full_messages
     end
     redirect_to admin_publisher_index_path
   end

@@ -38,7 +38,7 @@
     <ul class="nav menu">
       <li class="active">
         <%= link_to admin_users_url do %>
-          <em class="fa fa-dashboard"></em> Dashboard
+          <em class="fa fa-dashboard"></em> User
         <% end %>
       </li>
       <li>
@@ -49,6 +49,11 @@
       <li>
         <%= link_to admin_author_index_path do %>
           <em class="fa fa-clone"> </em> Author
+        <% end %>
+      </li>
+      <li>
+        <%= link_to admin_categories_path do %>
+          <em class="fa fa-dashboard"></em> Category
         <% end %>
       </li>
       <li>
