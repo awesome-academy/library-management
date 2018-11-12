@@ -7,3 +7,5 @@
 //= require admin/bootstrap
 //= require admin/jquery-1.11.1.min
 //= require admin/lumino.glyphs
+//= require moment
+//= require bootstrap-datetimepicker

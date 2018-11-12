@@ -1,0 +1,117 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <fieldset>
+          <%= search_form_for @q, url: admin_borrows_path,
+            class: "form-horizontal", method: :get do |f| %>
+            <div class="form-group">
+              <div class="col-md-12">
+                <%= f.search_field :user_username_cont, class: "form-control",
+                  placeholder: t("admin.search_name") %>
+              </div>
+            </div>
+            <div class="form-group" style="margin-left: 3px">
+              <div class="row">
+                <div class="col-md-3">
+                  <%= f.label :from %>
+                  <div class="input-group date" id="selectFrom">
+                    <%= f.text_field :from_gteq, class: "form-control" %>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <%= f.label :to %>
+                  <div class="input-group date" id="selectTo">
+                    <%= f.text_field :to_lteq, class: "form-control" %>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <%= f.label :status %>
+                  <%= f.select :status_eq, select_borrows_status, {include_blank: true},
+                    class: "form-control" %>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-2 col-md-offset-9">
+                <%= f.submit t("admin.search"),
+                  class: "btn btn-primary btn-md form-control" %>
+                <button class="btn btn-success btn-md form-control" id="export">
+                  <%= t"admin.export" %>
+                </button>
+              </div>
+            </div>
+          <% end %>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <table class="table table-condensed" style="border-collapse:collapse;">
+            <thead>
+                <tr>
+                  <th>#Id</th>
+                  <th><% t "borrow.name" %></th>
+                  <th><% t "borrow.number_book" %></th>
+                  <th><% t "borrow.from" %></th>
+                  <th><% t "borrow.to" %></th>
+                  <th><% t "borrow.status" %></th>
+                </tr>
+            </thead>
+            <tbody>
+              <% @borrows.each do |borrow| %>
+                <tr data-toggle="collapse"
+                  data-target="#detail<%= borrow.id %>"
+                  class="accordion-toggle">
+                  <td><%= borrow.id %></td>
+                  <td><%= borrow.user.username %></td>
+                  <td><%= borrow.borrow_books.count %></td>
+                  <td class="text-success"><%= borrow.from %></td>
+                  <td class="text-success"><%= borrow.to %></td>
+                  <td class="text-success">
+                  <% if borrow.status.eql?("returned") %>
+                    <span><%= borrow.status %></span>
+                  <% else %>
+                    <%= form_for borrow, url: admin_borrow_path(borrow) do |f| %>
+                      <%= f.select :status, select_borrows_status,
+                        {:selected => Borrow.statuses[borrow.status]},
+                        class: "form-control", onchange: "this.form.submit();" %>
+                    <% end %>
+                  <% end %>
+                  </td>
+                </tr>
+                <tr >
+                    <td colspan="6" class="hiddenRow">
+                      <div class="accordian-body collapse"
+                        id="detail<%= borrow.id %>">
+                        <ol>
+                          <% borrow.books.each do |book| %>
+                          <li>
+                            <%= book.name %>
+                          </li>
+                          <% end %>
+                        </ol>
+                      </div>
+                    </td>
+                </tr>
+              <% end %>
+            </tbody>
+        </table>
+        <div>
+          <%= paginate @borrows %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag "admin/borrow", "data-turbolinks-track": "reload" %>

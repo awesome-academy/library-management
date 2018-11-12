@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :author, except: %i(new edit show)
     resources :categories
     resources :books
+    resources :borrows, only: %i(index update)
   end
   devise_for :users, :controllers => {:registrations => "registrations"}
 end
