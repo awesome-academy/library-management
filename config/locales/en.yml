@@ -28,3 +28,8 @@ en:
     new_publisher: "New Publisher"
     new_author: "New Author"
     delete_confirm: "If you delete it, all books belong to it will be set to undefine"
+    search_name: "Enter search name"
+  book:
+    book_not_found: "Book not found"
+    image_too_large: "Uploaded image is too large"
+    create_book: "Create new book"
