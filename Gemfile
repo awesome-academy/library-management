@@ -24,6 +24,9 @@ gem "ffaker"
 gem "toastr-rails"
 gem "jquery-rails"
 gem "ransack"
+gem "carrierwave"
+gem "mini_magick"
+gem "chartkick"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

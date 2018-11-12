@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "/books", to: "books#index"
   get "/book", to: "books#show"
   namespace :admin do
+    root to: "statistic#index"
     resources :users do
       member do
         post "/update_role", to: "users#update_role"
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
     resources :publisher, except: %i(new edit show)
     resources :author, except: %i(new edit show)
     resources :categories
+    resources :books
   end
   devise_for :users, :controllers => {:registrations => "registrations"}
 end

@@ -37,6 +37,16 @@
     <div class="divider"></div>
     <ul class="nav menu">
       <li class="active">
+        <%= link_to admin_root_path do %>
+          <em class="fa fa-clone"> </em> Dashboard
+        <% end %>
+      </li>
+      <li>
+        <%= link_to admin_books_path do %>
+          <em class="fa fa-clone"> </em> Book
+        <% end %>
+      </li>
+      <li>
         <%= link_to admin_users_url do %>
           <em class="fa fa-dashboard"></em> User
         <% end %>
