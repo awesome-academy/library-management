@@ -43,6 +43,7 @@ en:
     book_exit: "The book already exists"
     add_success: "Add success"
     del_success: "dell success"
+    cannot_accept: "Cannot accept borrow, this borrow contain book has borrowed by other user at the same time"
   client:
     author: "Author"
     category: "Category"
@@ -63,3 +64,13 @@ en:
     must_login: "You must log in"
     new: "New"
     book_not_found: "Book not found"
+  mailler:
+    return_late_subject: "Notify return book late"
+    return_late_content_1: "Dear %s,"
+    return_late_content_2: "You forgot return book to library, you book contain:"
+    return_late_content_3: "Please return book to library."
+    return_late_content_4: "Thank you."
+    monthly_report_title: "Library monthly report"
+  statistic:
+    borrow_status: "Borrow status"
+    book_in_out: "Book in and out library"
