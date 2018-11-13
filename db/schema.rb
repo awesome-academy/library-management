@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181110062123) do
+ActiveRecord::Schema.define(version: 20181105090918) do
 
   create_table "authors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20181110062123) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
-    t.integer "parent_id"
+    t.integer "parent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
