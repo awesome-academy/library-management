@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   layout :layout_by_resource
-  before_action :load_cart
   before_action :load_categories
   before_action :load_publishers
 

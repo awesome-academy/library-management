@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :search_book, only: %i(index show)
+  before_action :load_cart
 
   def index
     @authors = Author.select(:id, :name)

@@ -1,5 +1,5 @@
 class Admin::BooksController < Admin::AdminBaseController
-  load_and_authorize_resource param_method: :books_param
+  load_and_authorize_resource param_method: :book_param
   before_action :get_book, only: %i(edit update destroy)
 
   def index
@@ -47,6 +47,7 @@ class Admin::BooksController < Admin::AdminBaseController
   end
 
   def destroy
+    @book.borrow_books.update book_id: nil
     if @book.delete
       flash[:success] = t "admin.delete_success"
     else

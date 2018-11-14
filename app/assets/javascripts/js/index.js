@@ -5,4 +5,3 @@
 //= require js/x_plugins
 //= require js/classy-nav.min
 //= require js/x_active
-//= require js/borrow
