@@ -28,7 +28,8 @@
         <%= t "statistic.borrow_status" %>
       </div>
       <div class="panel-body">
-        <%= bar_chart Book.joins(:borrow).group(:name).count %>
+        <%= bar_chart Book.joins(:borrow).group(:name)
+          .order("count_all desc").count %>
       </div>
     </div>
   </div>

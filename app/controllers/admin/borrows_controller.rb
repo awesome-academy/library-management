@@ -1,4 +1,6 @@
 class Admin::BorrowsController < Admin::AdminBaseController
+  load_and_authorize_resource
+
   def index
     @q = Borrow.ransack params[:q]
     respond_to do |format|

@@ -1,4 +1,5 @@
 class Admin::PublisherController < Admin::AdminBaseController
+  load_and_authorize_resource
   before_action :load_publisher, only: %i(update destroy)
 
   def index

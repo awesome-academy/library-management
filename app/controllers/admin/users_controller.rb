@@ -1,4 +1,5 @@
 class Admin::UsersController < Admin::AdminBaseController
+  load_and_authorize_resource
   before_action :get_user, only: %i(edit update destroy update_role)
 
   def index

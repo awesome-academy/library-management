@@ -11,6 +11,9 @@ class Book < ApplicationRecord
   validates :page_number, numericality: { only_integer: true, other_than: 0 }
   validate  :picture_size
   scope :order_by_created_at_desc, -> {order created_at: :desc}
+  accepts_nested_attributes_for :category
+  accepts_nested_attributes_for :author
+  accepts_nested_attributes_for :publisher
 
   def self.to_csv books
     require "csv"
