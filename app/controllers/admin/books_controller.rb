@@ -1,4 +1,5 @@
 class Admin::BooksController < Admin::AdminBaseController
+  load_and_authorize_resource param_method: :books_param
   before_action :get_book, only: %i(edit update destroy)
 
   def index
@@ -25,7 +26,7 @@ class Admin::BooksController < Admin::AdminBaseController
   def edit; end
 
   def create
-    @book = Book.new book_param
+    @book = Book.new books_param
     if @book.save
       redirect_to admin_books_path
       flash[:success] = t "admin.create_success"
@@ -36,7 +37,7 @@ class Admin::BooksController < Admin::AdminBaseController
   end
 
   def update
-    if @book.update book_param
+    if @book.update books_param
       redirect_to admin_books_path
       flash[:success] = t "admin.update_success"
     else
@@ -62,7 +63,7 @@ class Admin::BooksController < Admin::AdminBaseController
     flash[:error] = t "book.book_not_found"
   end
 
-  def book_param
+  def books_param
     params.require(:book).permit :name, :describe, :image, :page_number,
       :author_id, :category_id, :publisher_id
   end

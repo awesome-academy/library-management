@@ -4,6 +4,8 @@
 *= require font-awesome.min
 *= require styles.scss
 *= require styles.css
+*= require select2
+*= require select2-bootstrap
 */
 @import 'bootstrap-sprockets';
 @import 'bootstrap';

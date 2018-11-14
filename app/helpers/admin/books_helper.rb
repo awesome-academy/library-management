@@ -8,6 +8,15 @@ module Admin::BooksHelper
   end
 
   def book_select_category
-    Category.select(:id, :name).collect{ |c| [c.name, c.id] }
+    select_category = Array.new
+    Category.parent_only.includes(:subcategories).each do |parent|
+      select_category << [parent.name, parent.id]
+      unless parent.subcategories.empty?
+        parent.subcategories.each do |sub|
+          select_category << [". "+sub.name, sub.id]
+        end
+      end
+    end
+    select_category
   end
 end

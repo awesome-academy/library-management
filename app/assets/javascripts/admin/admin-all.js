@@ -9,3 +9,4 @@
 //= require admin/lumino.glyphs
 //= require moment
 //= require bootstrap-datetimepicker
+//= require select2-full

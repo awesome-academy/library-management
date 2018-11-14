@@ -32,6 +32,7 @@ gem "bootstrap3-datetimepicker-rails", "~> 4.17.47"
 gem "bootstrap-sass"
 gem "sidekiq"
 gem "sidekiq-cron"
+gem "select2-rails"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

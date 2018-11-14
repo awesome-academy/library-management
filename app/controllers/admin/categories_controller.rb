@@ -1,4 +1,5 @@
 class Admin::CategoriesController < Admin::AdminBaseController
+  load_and_authorize_resource
   before_action :get_category, only: %i(edit update destroy)
 
   def index
