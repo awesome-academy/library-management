@@ -51,9 +51,11 @@
     </nav>
     <div class="header-meta d-flex clearfix justify-content-end">
       <%= render "layouts/search_all" %>
+      <% if user_signed_in? && current_user.is_admin %>
       <div class="user-login-info">
         <%= link_to t("client.admin"), admin_root_path %>
       </div>
+        <% end %>
       <div class="cart-area">
         <a href="#" id="essenceCartBtn"><%= image_tag "img/core-img/bag.svg" %>
           <% if session[:cart]["books"].present? %>

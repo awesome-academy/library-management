@@ -1,5 +1,6 @@
 class PublisherController < ApplicationController
   before_action :search_book, only: %i(index show)
+  before_action :load_cart
   def show
     @authors = Author.select(:id, :name)
     @publishers = Publisher.select(:id, :name)
