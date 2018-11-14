@@ -1,3 +1,4 @@
 constant:
   page_size: 10
   max_size_image: 5
+  book_new: 6

@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root "static_pages#home"
-  get "/books", to: "books#index"
-  get "/book", to: "books#show"
+  get "/book/:id", to: "books#show",as: "book_show"
   namespace :admin do
     root to: "statistic#index"
     resources :users do
@@ -16,4 +15,12 @@ Rails.application.routes.draw do
     resources :borrows, only: %i(index update)
   end
   devise_for :users, :controllers => {:registrations => "registrations"}
+  resources :borrow, except: %i(new edit update)
+  resources :books, only: %i(index)
+  resources :category, only: %i(show)
+  resources :author, only: %i(show)
+  resources :publisher, only: %i(show)
+  post "cart/add/:id" => "cart#add", :as => "cart_add"
+  delete "cart/remove(/:id(/:all))" => "cart#delete", :as => "cart_delete"
 end
+

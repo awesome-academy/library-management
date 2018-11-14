@@ -4,7 +4,9 @@ class Borrow < ApplicationRecord
   has_many :books, through: :borrow_books
   enum status: %i(waiting accept reject returned)
   delegate :username, to: :user, prefix: true
-
+  validates :from, presence: true
+  validates :to, presence: true
+  scope :get_by_current_user, -> {order(:created_at).where(user_id: current_user.id)}
   def self.to_csv borrows
     require "csv"
     CSV.generate do |csv|

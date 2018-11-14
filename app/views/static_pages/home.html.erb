@@ -1,69 +1,32 @@
 <% provide :search_path, root_path %>
-<!-- ##### Welcome Area Start ##### -->
 <section class="welcome_area bg-img background-overlay" style="background-image: url(<%= image_url "img/bg-img/bg-1.jpg" %>);">
   <div class="container h-100">
     <div class="row h-100 align-items-center">
       <div class="col-12">
         <div class="hero-content">
-          <h6>asoss</h6>
-          <h2>New Collection</h2>
-          <a href="#" class="btn essence-btn">view collection</a>
+          <h2><%= t "client.library" %></h2>
+          <%= link_to t("client.library"), books_path, class: "btn essence-btn" %>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- ##### Welcome Area End ##### -->
-
-<!-- ##### Top Catagory Area Start ##### -->
+<%= render "popular_book" %>
 <div class="top_catagory_area section-padding-80 clearfix">
   <div class="container">
     <div class="row justify-content-center">
-      <%= render "static_pages/categoy" %>
-      <%= render "static_pages/categoy" %>
-      <%= render "static_pages/categoy" %>
-      <%= render "static_pages/categoy" %>
-      <%= render "static_pages/categoy" %>
-      <%= render "static_pages/categoy" %>
+      <% @categories.each do |category| %>
+        <% if category.parent.nil? %>
+          <% @category = category  %>
+          <%= render partial: "categories" %>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
-<!-- ##### Top Catagory Area End ##### -->
-<!-- ##### New Arrivals Area Start ##### -->
-<section class="new_arrivals_area section-padding-80 clearfix">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="section-heading text-center">
-          <h2>Popular Products</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="popular-products-slides owl-carousel">
-          <%= render "static_pages/item" %>
-          <%= render "static_pages/item" %>
-          <%= render "static_pages/item" %>
-          <%= render "static_pages/item" %>
-          <%= render "static_pages/item" %>
-          <%= render "static_pages/item" %>
-          <%= render "static_pages/item" %>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ##### New Arrivals Area End ##### -->
-<!-- ##### Brands Area Start ##### -->
 <div class="brands-area d-flex align-items-center justify-content-between">
-  <%= render "static_pages/brand" %>
-  <%= render "static_pages/brand" %>
-  <%= render "static_pages/brand" %>
-  <%= render "static_pages/brand" %>
-  <%= render "static_pages/brand" %>
+  <% @publishers.each do |publisher| %>
+      <% @publisher = publisher  %>
+      <%= render partial: "publishers" %>
+  <% end %>
 </div>
-<!-- ##### Brands Area End ##### -->

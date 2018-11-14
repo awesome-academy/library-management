@@ -1,83 +1,67 @@
-<!-- ##### Header Area Start ##### -->
 <header class="header_area">
   <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
-    <!-- Classy Menu -->
     <nav class="classy-navbar" id="essenceNav">
-      <!-- Logo -->
       <a class="nav-brand" href="#"><%= image_tag "img/core-img/logo.png" %></a>
-      <!-- Navbar Toggler -->
       <div class="classy-navbar-toggler">
         <span class="navbarToggler"><span></span><span></span><span></span></span>
       </div>
-      <!-- Menu -->
       <div class="classy-menu">
-        <!-- close btn -->
         <div class="classycloseIcon">
-          <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+          <div class="cross-wrap">
+            <span class="top"></span>
+            <span class="bottom"></span>
+          </div>
         </div>
-        <!-- Nav Start -->
         <div class="classynav">
           <ul>
-            <li><a href="#">Shop</a>
+            <li><a href="#"><%= t "client.category" %></a>
               <div class="megamenu">
-                <ul class="single-mega cn-col-4">
-                  <li class="title">Women's Collection</li>
-                  <li><a href="#">Dresses</a></li>
-                  <li><a href="#">Blouses &amp; Shirts</a></li>
-                  <li><a href="#">T-shirts</a></li>
-                  <li><a href="#">Rompers</a></li>
-                  <li><a href="#">Bras &amp; Panties</a></li>
-                </ul>
-                <ul class="single-mega cn-col-4">
-                  <li class="title">Men's Collection</li>
-                  <li><a href="#">T-Shirts</a></li>
-                  <li><a href="#">Polo</a></li>
-                  <li><a href="#">Shirts</a></li>
-                  <li><a href="#">Jackets</a></li>
-                  <li><a href="#">Trench</a></li>
-                </ul>
-                <ul class="single-mega cn-col-4">
-                  <li class="title">Kid's Collection</li>
-                  <li><a href="#">Dresses</a></li>
-                  <li><a href="#">Shirts</a></li>
-                  <li><a href="#">T-shirts</a></li>
-                  <li><a href="#">Jackets</a></li>
-                  <li><a href="#">Trench</a></li>
-                </ul>
-                <div class="single-mega cn-col-4">
-                  <%= image_tag "img/bg-img/bg-6.jpg" %>
-                </div>
+                <% @categories.each do |category| %>
+                  <% if category.parent.nil? %>
+                    <ul class="single-mega cn-col-4">
+                      <li class="title"> <%= category.name %> </li>
+                      <li>
+                        <%= link_to "all", category_path(category.id) %>
+                      </li>
+                      <%= render partial: "layouts/subcategories",
+                        locals: {subcategories: category.subcategories} if category.subcategories.present? %>
+                    </ul>
+                  <% end %>
+                <% end %>
               </div>
             </li>
-            <li><a href="#">Pages</a>
+            <li><a href="#"><%= t "client.pages" %></a>
               <ul class="dropdown">
                 <li><%= link_to "home", root_path %></li>
                 <li><%= link_to "library", books_path %></li>
-                <li><%= link_to "Book", book_path %></a></li>
               </ul>
+            </li>
+            <% if current_user %>
+              <li><a href="#"><%= t "client.acount" %></a>
+                <ul class="dropdown">
+                  <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "log in", user_session_path %></li>
+            <% end %>
+            </ul>
             </li>
           </ul>
         </div>
-        <!-- Nav End -->
       </div>
     </nav>
-    <!-- Header Meta Data -->
     <div class="header-meta d-flex clearfix justify-content-end">
       <%= render "layouts/search_all" %>
-      <!-- Favourite Area -->
-      <div class="favourite-area">
-        <a href="#"> <%= image_tag "img/core-img/heart.svg" %></a>
-      </div>
-      <!-- User Login Info -->
       <div class="user-login-info">
-        <a href="#"><%= image_tag "img/core-img/user.svg" %></a>
+        <%= link_to t("client.admin"), admin_root_path %>
       </div>
-      <!-- Cart Area -->
       <div class="cart-area">
         <a href="#" id="essenceCartBtn"><%= image_tag "img/core-img/bag.svg" %>
-          <span>3</span></a>
+          <% if session[:cart]["books"].present? %>
+            <span><%= session[:cart]["books"].count %></span>
+          <% end %>
+        </a>
       </div>
     </div>
   </div>
 </header>
-<!-- ##### Header Area End ##### -->
+

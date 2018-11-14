@@ -1,0 +1,14 @@
+<%= form_tag borrow_index_path do |f| %>
+  <ul class="summary-table">
+    <li>
+      <%= label_tag :from %>
+      <%= date_field_tag :from %>
+    </li>
+    <li>
+      <%= label_tag :to %>
+      <%= date_field_tag :to %>
+    </li>
+    <%= hidden_field_tag :status, "waiting" %>
+    <%= submit_tag t("client.borrow"), class: "btn essence-btn" %>
+  </ul>
+<% end %>

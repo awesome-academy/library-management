@@ -1,0 +1,21 @@
+<div class="widget catagory mb-50">
+  <h6 class="widget-title mb-30"><%= t "client.catagories" %></h6>
+  <div class="catagories-menu">
+    <ul id="menu-content2" class="menu-content collapse show">
+      <% @categories.each do |category| %>
+        <% if category.parent.nil? %>
+          <li data-toggle="collapse" data-target="#<%= category.name.downcase %>">
+            <a href="#"><%= category.name %> </a>
+            <ul class="sub-menu collapse show" id="<%= category.name.downcase %>">
+              <li>
+                <%= link_to "all", category_path(category.id) %>
+              </li>
+              <%= render partial: "layouts/subcategories",
+                locals: {subcategories: category.subcategories} if category.subcategories.present? %>
+            </ul>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
