@@ -20,10 +20,27 @@ class Admin::BorrowsController < Admin::AdminBaseController
   def update
     @borrow = Borrow.find_by id: params[:id]
     return if @borrow.nil?
-    if @borrow.update status: params[:borrow][:status].to_i
+    borrow_status = params[:borrow][:status].to_i
+    if borrow_status.equal? Borrow.statuses["accept"]
+      unless can_accept?
+        flash[:error] = t "borrow.cannot_accept"
+        redirect_to admin_borrows_path
+        return
+      end
+    end
+    if @borrow.update status: borrow_status
       redirect_to admin_borrows_path
     else
       flash[:error] = @borrow.errors.full_messages
     end
+  end
+
+  def can_accept?
+    borrow_ids = @borrow.books.select :id
+    t = Borrow.arel_table
+    same_time = t[:from].between(@borrow.from..@borrow.to)
+      .or(t[:to].between(@borrow.from..@borrow.to))
+    Borrow.joins(:books).where("books.id in (?)", borrow_ids)
+      .where(status: 1).where(same_time).first.nil?
   end
 end

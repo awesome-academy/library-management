@@ -1,0 +1,7 @@
+cron_book_return_late:
+  cron: "1 0 * * *"
+  class: "SendReturnEmailJob"
+
+cron_monthly_report:
+  cron: "0 0 1 * *"
+  class: "SumaryMonthlyJob"

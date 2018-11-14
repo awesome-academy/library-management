@@ -7,10 +7,10 @@ $('.accordian-body').on('show.bs.collapse', function () {
 
 $(function () {
   $('#selectFrom').datetimepicker({
-    format: 'L'
+    format: 'YYYY-MM-DD'
   });
   $('#selectTo').datetimepicker({
-    format: 'L',
+    format: 'YYYY-MM-DD',
     useCurrent: false
   });
   $('#selectFrom').on('dp.change', function (e) {
